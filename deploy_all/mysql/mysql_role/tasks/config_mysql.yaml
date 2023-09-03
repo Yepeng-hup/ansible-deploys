@@ -1,0 +1,15 @@
+---
+- name: config mysql server
+  template:
+    src: my.cnf.j2
+    dest: /etc/my.cnf
+    backup: true
+
+- name: start mysql server
+  raw: systemctl start mysql && systemctl enable mysql
+
+- name: check mysql start port
+  raw:
+  register: result
+- name: shwo check port info
+  debug: var=result.stdout_lines verbosity=0

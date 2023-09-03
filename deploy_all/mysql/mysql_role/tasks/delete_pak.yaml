@@ -1,0 +1,9 @@
+---
+- name: delete dest hots MySQL-client and MySQL-devel and MySQL-server pak
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - /opt/MySQL-client-{{ version }}-1.el6.x86_64.rpm
+    - /opt/MySQL-devel-{{ version }}-1.el6.x86_64.rpm
+    - /opt/MySQL-server-{{ version }}-1.el6.x86_64.rpm

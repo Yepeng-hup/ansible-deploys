@@ -1,0 +1,23 @@
+---
+- name: uninstall mariadb crutch pak it mysql conflict
+  yum:
+    name: mariadb-libs
+    state: removed
+
+- name: install mysql crutch pak
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - libaio
+    - xxx
+    - xxxx
+
+- name: install mysql
+  raw: yum -y install /opt/MySQL-*.rpm
+
+- name: check mysql install
+  raw: rpm -q MySQL-*.rpm
+  register: result
+- name: shwo check result info
+  debug: var=result.stdout_lines verbosity=0
