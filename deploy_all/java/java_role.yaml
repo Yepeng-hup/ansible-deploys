@@ -1,0 +1,5 @@
+---
+- hosts: "java"
+  remote_user: root
+  roles:
+   - role: java_role

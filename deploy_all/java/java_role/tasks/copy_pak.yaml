@@ -1,0 +1,10 @@
+---
+- name: copy java pak to dest host
+  unarchive:
+    src: {{ pak_path }}
+    dest: {{ install_dir }}
+
+- name: copy config java script
+  copy:
+    src: config_java.sh
+    dest: {{ tmp_dir }}
