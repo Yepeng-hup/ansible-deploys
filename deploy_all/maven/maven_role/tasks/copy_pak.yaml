@@ -1,0 +1,10 @@
+---
+- name: copy maven pak to dest host
+  unarchive:
+    src: {{ pak_path }}
+    dest: {{ install_dir }}
+
+- name: copy config maven script
+  copy:
+    src: config_maven.sh
+    dest: {{ tmp_dir }}

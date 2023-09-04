@@ -1,0 +1,7 @@
+---
+- import_tasks: copy_pak.yaml
+  tags: copy_pak
+- import_tasks: config_maven.yaml
+  tags: config_maven
+- import_tasks: delete_pak.yaml
+  tags: delete_pak

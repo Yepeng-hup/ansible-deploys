@@ -1,0 +1,5 @@
+---
+- hosts: "maven"
+  remote_user: root
+  roles:
+   - role: maven_role
