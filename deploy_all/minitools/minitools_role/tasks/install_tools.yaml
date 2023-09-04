@@ -1,0 +1,14 @@
+- name: install all tools pak
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - epel-release
+    - git
+    - svn
+    - wget
+    - curl
+    - net-tools
+    - iftop
+    - iotop
+    - vim

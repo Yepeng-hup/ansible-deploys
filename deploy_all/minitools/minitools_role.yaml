@@ -1,0 +1,6 @@
+---
+- hosts: "minitools"
+  remote_user: root
+
+  roles:
+   - role: minitools_role
