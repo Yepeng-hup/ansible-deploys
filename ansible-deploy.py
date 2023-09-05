@@ -11,7 +11,7 @@ from colorama import init
 
 def command_help():
     print("Use command:")
-    print("     python ansible-deploy.py mysql    Usage examples.")
+    print("     python ansible-deploy.py java    Usage examples.")
     print("         Option: [custom,java,kvm,maven,go,minitools]")
 
 
