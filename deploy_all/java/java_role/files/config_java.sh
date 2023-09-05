@@ -2,6 +2,14 @@
 
 DEST_DIR=/usr/local
 
+function check_env(){
+    egrep "JAVA_HOME|JAVA|java" /etc/profile > /dev/null
+    if [ `echo $?` == '0' ];then
+        echo "java is installd."
+        exit 1
+    fi
+}
+
 function config_env(){
 ln -sf ${DEST_DIR}/$(ls ${DEST_DIR}|grep "jdk") ${DEST_DIR}/java
 cat >> /etc/profile << EOF
@@ -12,9 +20,8 @@ EOF
 }
 
 function main() {
+    check_env
     config_env
-    source /etc/profile && sleep 1s
-    source /etc/profile
     echo "$PATH --- $JAVA_HOME"
 }
 main
