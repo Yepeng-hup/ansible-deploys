@@ -1,0 +1,5 @@
+---
+- hosts: "go"
+  remote_user: root
+  roles:
+   - role: go_role

@@ -1,0 +1,10 @@
+---
+- name: copy go pak to dest host
+  unarchive:
+    src: "{{ pak_path }}"
+    dest: "{{ install_dir }}"
+
+- name: copy config go script
+  copy:
+    src: "config_go.sh"
+    dest: "{{ tmp_dir }}"
