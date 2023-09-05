@@ -8,6 +8,12 @@ cat >> /etc/profile << EOF
 export MAVEN_HOME=/usr/local/maven
 export PATH=\$MAVEN_HOME/bin:\$PATH
 EOF
-source /etc/profile && echo "$PATH --- $MAVEN_HOME"
 }
-config_env
+
+function main() {
+    config_env
+    source /etc/profile && sleep 1s
+    source /etc/profile
+    echo "$PATH --- $MAVEN_HOME"
+}
+main

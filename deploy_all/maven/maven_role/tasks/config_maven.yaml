@@ -1,14 +1,8 @@
 ---
 - name: config maven and set system env
-  shell: bash {{ tmp_dir }}/config_maven.sh
+  shell: source {{ tmp_dir }}/config_maven.sh
   register: result
 - name: shwo maven config info
   debug: var=result.stdout_lines verbosity=0
 
-- name: use maven command check
-  shell: mvn -v
-  register: result
-- name: show command stdout result
-  debug: var=result.stdout_lines verbosity=0
-
-- name: config maven hub
+#- name: config maven hub

@@ -4,4 +4,4 @@
     path: "{{ item }}"
     state: absent
   with_items:
-    - {{ tmp_dir }}/config_maven.sh
+    - "{{ tmp_dir }}/config_maven.sh"
