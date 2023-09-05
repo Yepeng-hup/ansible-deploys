@@ -9,6 +9,12 @@ export JAVA_HOME=/usr/local/java
 export CLASSPATH=.:\$JAVA_HOME/jre/lib/rt.jar:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar
 export PATH=\$JAVA_HOME/bin:\$PATH
 EOF
-source /etc/profile && echo "$PATH --- $JAVA_HOME"
 }
-config_env
+
+function main() {
+    config_env
+    source /etc/profile && sleep 1s
+    source /etc/profile
+    echo "$PATH --- $JAVA_HOME"
+}
+main
