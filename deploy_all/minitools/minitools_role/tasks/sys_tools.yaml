@@ -1,4 +1,4 @@
-- name: install all tools pak
+- name: install system tools pak
   yum:
     name: "{{ item }}"
     state: latest
@@ -12,3 +12,13 @@
     - iftop
     - iotop
     - vim
+    - tcping
+    - ntpdate
+    - screen
+    - expect
+    - telnet
+    - unzip
+    - tree
+    - svn
+    - gdb
+    

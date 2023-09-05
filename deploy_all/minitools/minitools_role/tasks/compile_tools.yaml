@@ -1,0 +1,23 @@
+- name: install compile tools pak
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - epel-release
+    - gcc
+    - gcc-c++
+    - bison
+    - pkgconfig
+    - glib2-devel
+    - gettext
+    - make
+    - libpng-devel
+    - libjpeg-devel
+    - libtiff-devel
+    - libexif-devel
+    - giflib-devel
+    - libX11-devel
+    - freetype-devel
+    - fontconfig-devel
+    - cairo-devel
+    
