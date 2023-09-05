@@ -12,7 +12,7 @@ function check_env(){
 
 function main(){
 cat >> /etc/profile << EMO
-export PATH=$PATH:/usr/local/go/bin
+export PATH=\$PATH:/usr/local/go/bin
 export GOPROXY=https://goproxy.io,direct
 EMO
 if [ `echo $?` -eq 0 ];then
