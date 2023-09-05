@@ -1,9 +1,0 @@
----
-- import_tasks: copy_pak.yaml
-  tags: copy_pak
-- import_tasks: deploy_mysql.yaml
-  tags: deploy_mysql
-- import_tasks: config_mysql.yaml
-  tags: config_mysql
-- import_tasks: delete_pak.yaml
-  tags: delete_pak

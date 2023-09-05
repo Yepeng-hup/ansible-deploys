@@ -1,8 +1,0 @@
----
-
-#- hosts: "{{ hosts }}"
-- hosts: "test"
-  remote_user: root
-
-  roles:
-   - role: test_role
