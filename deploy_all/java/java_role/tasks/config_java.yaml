@@ -1,6 +1,12 @@
 ---
 - name: config java and set system env
-  shell: source {{ tmp_dir }}/config_java.sh
+  shell: bash {{ tmp_dir }}/config_java.sh
   register: result
 - name: shwo java config info
+  debug: var=result.stdout_lines verbosity=0
+
+- name: check java use
+  shell: source /etc/profile && java -version
+  register: result
+- name: show java info
   debug: var=result.stdout_lines verbosity=0
