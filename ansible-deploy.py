@@ -12,7 +12,7 @@ from colorama import init
 def command_help():
     print("Use command:")
     print("     python ansible-deploy.py java    Usage examples.")
-    print("         Option: [custom,java,kvm,maven,go,minitools]")
+    print("         Option: [java,maven,go,minitools]")
 
 
 class Deploy(object):
@@ -32,16 +32,10 @@ class Deploy(object):
         cmd = "ansible-playbook go_role.yaml"
         os.system(cmd)
 
-    def kvm_way(self):
-        print("my kvm")
-
     def minitools_way(self):
         os.chdir("deploy_all/minitools")
         cmd = "ansible-playbook minitools_role.yaml"
         os.system(cmd)
-
-    def custom_way(self):
-        pass
 
 
 if __name__ == "__main__":
@@ -58,10 +52,6 @@ if __name__ == "__main__":
                 deploy.go_way()
             elif argv_str == "minitools":
                 deploy.minitools_way()
-            elif argv_str == "kvm":
-                deploy.kvm_way()
-            elif argv_str == "custom":
-                deploy.custom_way()
             else:
                 print("\033[1;31mERROR: not have parameter.\033[0m")
         else:
