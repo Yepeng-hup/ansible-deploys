@@ -17,7 +17,7 @@
 ### python命令行使用
 
 ```
-#python版本需大于3.0，否者程序不会执行任何动作。
+#python版本需>=3.0。
 # 查看可用模块
 python ansible-deploy.py -h
 
