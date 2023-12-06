@@ -6,7 +6,8 @@ import sys
 from datetime import datetime
 from colorama import init
 
-#times = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+# times = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
 def command_help():
