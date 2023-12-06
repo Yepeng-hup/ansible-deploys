@@ -4,9 +4,3 @@
   register: result
 - name: shwo go config info
   debug: var=result.stdout_lines verbosity=0
-
-- name: check go use
-  shell: source /etc/profile && go version
-  register: result
-- name: show go info
-  debug: var=result.stdout_lines verbosity=0

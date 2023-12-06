@@ -4,11 +4,5 @@
   register: result
 - name: shwo maven config info
   debug: var=result.stdout_lines verbosity=0
-
-- name: check mvn use
-  shell: source /etc/profile && mvn -v
-  register: result
-- name: show mvn info
-  debug: var=result.stdout_lines verbosity=0
-
+  
 #- name: config maven hub
