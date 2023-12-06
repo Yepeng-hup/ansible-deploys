@@ -23,5 +23,7 @@ python ansible-deploy.py -h
 
 #执行安装
 python ansible-deploy.py java
-```
 
+#关于环境变量问题
+部署完成后环境变量是没有载入的，可以在自己后续脚本中最前面引用source /etc/profile，在执行后续指令。
+```
